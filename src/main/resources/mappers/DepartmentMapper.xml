@@ -8,10 +8,10 @@
         from department as d
         left join company as c on d.company_id = c.id
         <where>
-            <if test="companyId !=null and companyId!=''">
+            <if test="companyId !=null and companyId != ''">
                 d.company_id=#{companyId}
             </if>
-            <if test="deptName!=null and deptName != ''">
+            <if test="deptName !=null and deptName != ''">
                 d.dept_name=#{deptName}
             </if>
         </where>
