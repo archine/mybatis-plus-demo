@@ -9,10 +9,10 @@
         left join company as c on d.company_id = c.id
         <where>
             <if test="companyId !=null and companyId != ''">
-                d.company_id=#{companyId}
+                and d.company_id=#{companyId}
             </if>
             <if test="deptName !=null and deptName != ''">
-                d.dept_name=#{deptName}
+                and d.dept_name=#{deptName}
             </if>
         </where>
         order by d.id desc

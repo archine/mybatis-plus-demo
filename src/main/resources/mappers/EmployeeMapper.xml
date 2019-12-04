@@ -10,13 +10,13 @@
         left join department d on e.dept_id = d.id
         <where>
             <if test="employeeName!=null and employeeName != ''">
-                e.employee_name = #{employeeName}
+                and e.employee_name = #{employeeName}
             </if>
             <if test="companyId != null and companyId != ''">
-                e.company_id = #{companyId}
+                and e.company_id = #{companyId}
             </if>
             <if test="deptId!=null and deptId != ''">
-                e.dept_id = #{deptId}
+                and e.dept_id = #{deptId}
             </if>
         </where>
         order by e.id desc
